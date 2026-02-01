@@ -22,7 +22,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Kernel"
-  avatar           : "images/avatar.png"
+  avatar           : "/images/avatar.png"
   # If you want to use a different avatar image, replace the path below
   # with your image placed under the `images/` or `assets/` folder.
   bio              : "Beihang University | Mathematics"
