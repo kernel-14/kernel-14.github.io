@@ -22,15 +22,15 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Kernel"
-  avatar           : "images/apple-touch-icon.png"
+  avatar           : "images/avatar.png"
   # If you want to use a different avatar image, replace the path below
   # with your image placed under the `images/` or `assets/` folder.
-  bio              : "[Your Institution]"
-  location         : "[Your Location]"
+  bio              : "Beihang University | Mathematics"
+  location         : "Beijing, China"
   employer         :
   pubmed           : 
   googlescholar    : "[Your Google Scholar URL]"
-  email            : "[your-email@example.com]"
+  email            : "kernel14@163.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
