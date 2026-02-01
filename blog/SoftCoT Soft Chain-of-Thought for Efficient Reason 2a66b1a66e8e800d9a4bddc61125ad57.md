@@ -7,6 +7,133 @@ tags: ["llm", "cot", "reasoning"]
 permalink: /blog/softcot/
 ---
 
+<style>
+  .post-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .post-header {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+  }
+
+  .post-title {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .post-meta {
+    display: flex;
+    gap: 20px;
+    color: #888;
+    font-size: 0.95em;
+    flex-wrap: wrap;
+  }
+
+  .post-category {
+    background: #EC707D;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+  }
+
+  .post-tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .tag {
+    background: #f0f0f0;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    color: #666;
+  }
+
+  .post-content {
+    line-height: 1.8;
+    color: #444;
+  }
+
+  .post-content h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8em;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+  }
+
+  .post-content h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 1.4em;
+  }
+
+  .post-content p {
+    margin-bottom: 20px;
+  }
+
+  .post-content strong {
+    color: #EC707D;
+    font-weight: 600;
+  }
+
+  .post-content ul, .post-content ol {
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+
+  .post-content li {
+    margin-bottom: 10px;
+  }
+
+  .post-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  .source-link {
+    background: #f8f9fa;
+    padding: 15px;
+    border-left: 4px solid #EC707D;
+    margin: 20px 0;
+    border-radius: 5px;
+  }
+
+  .source-link a {
+    color: #EC707D;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .source-link a:hover {
+    text-decoration: underline;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 40px;
+    color: #EC707D;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+</style>
+
 <div class="post-container">
   <div class="post-header">
     <h1 class="post-title">SoftCoT: Soft Chain-of-Thought for Efficient Reasoning</h1>
