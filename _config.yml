@@ -22,7 +22,9 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Kernel"
-  avatar           : "images/icon.png"
+  avatar           : "images/apple-touch-icon.png"
+  # If you want to use a different avatar image, replace the path below
+  # with your image placed under the `images/` or `assets/` folder.
   bio              : "[Your Institution]"
   location         : "[Your Location]"
   employer         :

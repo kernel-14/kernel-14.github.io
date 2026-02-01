@@ -360,8 +360,8 @@ Feel free to reach out for any form of communication or collaboration!
 <br>
 
 <!-- <div style="text-align: center;"> -->
-<div style="width: 20%; position:relative; left:40%">
-  <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=TexC6zB_7AOUKNMMshe4U4igIY-rca8pyS5kiQ7N6C8"></script>
-    <!-- 地图小部件代码结束 -->
+<div style="width: 20%; position:relative; left:40%; text-align:center;">
+	<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=O8pHdwwXHqd_549MPwJ-kMragFv7tZVUx-hwKkwLk7o"></script>
+	<!-- 交互式 ClustrMaps 脚本：如需替换，请修改上面 `d=` 参数为你在 ClustrMaps 仪表盘获得的值 -->
 </div>
 
