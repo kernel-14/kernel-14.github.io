@@ -1,79 +1,168 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>博客 - 建设中</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-        }
-        
-        .container {
-            background: white;
-            padding: 60px 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            max-width: 600px;
-            margin: 20px;
-        }
-        
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            color: #667eea;
-        }
-        
-        p {
-            font-size: 1.2em;
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-        
-        .icon {
-            font-size: 5em;
-            margin-bottom: 20px;
-        }
-        
-        .back-link {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: all 0.3s;
-            font-weight: 500;
-        }
-        
-        .back-link:hover {
-            background: #764ba2;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="icon">📝</div>
-        <h1>博客建设中</h1>
-        <p>博客功能正在开发中，敬请期待！</p>
-        <p>Blog is under construction, stay tuned!</p>
-        <a href="/" class="back-link">返回主页</a>
-    </div>
-</body>
-</html>
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<style>
+  .blog-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .blog-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .blog-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .blog-header p {
+    font-size: 1.1em;
+    color: #666;
+  }
+
+  .blog-posts {
+    display: grid;
+    gap: 30px;
+  }
+
+  .blog-post-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 4px solid #EC707D;
+  }
+
+  .blog-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  }
+
+  .post-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #888;
+    flex-wrap: wrap;
+  }
+
+  .post-date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .post-category {
+    display: inline-block;
+    background: #EC707D;
+    color: white;
+    padding: 3px 12px;
+    border-radius: 15px;
+    font-size: 0.85em;
+  }
+
+  .post-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .post-tag {
+    background: #f0f0f0;
+    color: #666;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.8em;
+  }
+
+  .post-title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .post-title a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .post-title a:hover {
+    color: #EC707D;
+  }
+
+  .post-excerpt {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .read-more {
+    display: inline-block;
+    color: #EC707D;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+
+  .read-more:hover {
+    color: #d55a6a;
+    transform: translateX(5px);
+  }
+
+  .read-more::after {
+    content: " →";
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+  }
+
+  .empty-state-icon {
+    font-size: 4em;
+    margin-bottom: 20px;
+  }
+</style>
+
+<div class="blog-container">
+  <div class="blog-header">
+    <h1>📝 Blog</h1>
+    <p>Research notes, paper reviews, and technical insights</p>
+  </div>
+
+  <div class="blog-posts">
+    
+    <article class="blog-post-card">
+      <div class="post-meta">
+        <span class="post-date">📅 June 15, 2024</span>
+        <span class="post-category">Research</span>
+      </div>
+      <div class="post-tags">
+        <span class="post-tag">CoA</span>
+        <span class="post-tag">LLM</span>
+        <span class="post-tag">Multi-Agent</span>
+      </div>
+      <h2 class="post-title">
+        <a href="/blog/chain-of-agents/">Chain of Agents: Large Language Models Collaborating on Long-Context Tasks</a>
+      </h2>
+      <p class="post-excerpt">
+        深入解析 Chain of Agents (CoA) 框架，一种创新的多智能体协作方法，用于解决大语言模型在处理长上下文任务时的挑战。通过链式协作机制，CoA 在多个基准测试中显著优于传统的 RAG 和长上下文窗口方法。
+      </p>
+      <a href="/blog/chain-of-agents/" class="read-more">Read more</a>
+    </article>
+
+    <!-- More blog posts will be added here -->
+
+  </div>
+</div>
