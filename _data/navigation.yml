@@ -19,7 +19,7 @@ main:
     url: "/#-mentorship-and-services"
 
   - title: "Blog"
-    url: "/blog.html"
+    url: "/blog/"
 
   - title: "Miscellaneous"
     url: "/#-miscellaneous"

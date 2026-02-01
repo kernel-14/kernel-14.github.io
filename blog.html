@@ -142,27 +142,38 @@ permalink: /blog/
   </div>
 
   <div class="blog-posts">
-    
-    <article class="blog-post-card">
-      <div class="post-meta">
-        <span class="post-date">📅 June 15, 2024</span>
-        <span class="post-category">Research</span>
+    {% assign posts = site.pages | where_exp: "p", "p.path contains 'blog/'" | sort: "date" | reverse %}
+    {% if posts.size > 0 %}
+      {% for post in posts %}
+        <article class="blog-post-card">
+          <div class="post-meta">
+            <span class="post-date">📅 {{ post.date | date: "%B %d, %Y" }}</span>
+            {% if post.category %}<span class="post-category">{{ post.category }}</span>{% endif %}
+          </div>
+          {% if post.tags %}
+          <div class="post-tags">
+            {% for tag in post.tags %}
+              <span class="post-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <h2 class="post-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+          {% if post.excerpt %}
+            <p class="post-excerpt">{{ post.excerpt }}</p>
+          {% else %}
+            <p class="post-excerpt">{{ post.content | strip_html | truncate: 160 }}</p>
+          {% endif %}
+          <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
+        </article>
+      {% endfor %}
+    {% else %}
+      <div class="empty-state">
+        <div class="empty-state-icon">🫙</div>
+        <p>No blog posts found yet.</p>
       </div>
-      <div class="post-tags">
-        <span class="post-tag">CoA</span>
-        <span class="post-tag">LLM</span>
-        <span class="post-tag">Multi-Agent</span>
-      </div>
-      <h2 class="post-title">
-        <a href="/blog/chain-of-agents/">Chain of Agents: Large Language Models Collaborating on Long-Context Tasks</a>
-      </h2>
-      <p class="post-excerpt">
-        深入解析 Chain of Agents (CoA) 框架，一种创新的多智能体协作方法，用于解决大语言模型在处理长上下文任务时的挑战。通过链式协作机制，CoA 在多个基准测试中显著优于传统的 RAG 和长上下文窗口方法。
-      </p>
-      <a href="/blog/chain-of-agents/" class="read-more">Read more</a>
-    </article>
-
-    <!-- More blog posts will be added here -->
+    {% endif %}
 
   </div>
 </div>
